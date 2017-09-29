@@ -8,43 +8,42 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+
+
 
 class HXNetwork: NSObject {
     
-    class func RegisterWithURLSession(finished:@escaping (_ response:[URL]) -> ()){
+    static let shareNetworkTool = HXNetwork()
+    
+     func loadBannerData(finished:@escaping (_ response:[URL]) -> ()){
         let url = URL(string: "http://www.cctvjy.cn/banner/list.do?size=4")
-        
         let session = URLSession.shared
         var request = URLRequest(url: url!)
         request.httpMethod = "get"
-//        request.httpBody = "phone=\(phone)&pwd=\(pwd)&code=\(code)".data(using: String.Encoding.utf8)
+        //        request.httpBody = "phone=\(phone)&pwd=\(pwd)&code=\(code)".data(using: String.Encoding.utf8)
         let task = session.dataTask(with: request) { (data, response, error) in
             if data != nil {
-                print(data!)
                 
-                let responseObject = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
-                guard responseObject != nil else{
-                    return
-                }
-                
-                let dataObject = responseObject?["data"] as! [NSDictionary]
-                    print(dataObject)
-                
+                let json = JSON(data:data!)
+                let dataObject = json["data"].arrayValue
+//
+                print(dataObject)
+//                let responseObject = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
+//                guard responseObject != nil else{
+//                    return
+//                }
+//                let dataObject = responseObject?["data"] as! [NSDictionary]
                 var UrlArr = [URL]()
                 
                 for i in 0..<dataObject.count{
-                
-                    print(i)
-                    let imgString = Common.baseUrl + (dataObject[i]["bannerUrl"] as! String)
-                    let imgUrl = URL(string: imgString)
-//                    let imgData =  NSData(contentsOf: imgUrl!)
-//                    let image = UIImage(data: imgData! as Data)
-                    UrlArr.append(imgUrl!)
                     
+                    let imgString = Common.baseUrl + (dataObject[i]["bannerUrl"].stringValue
+                    )
+                    let imgUrl = URL(string: imgString)
+                    UrlArr.append(imgUrl!)
                 }
-                
                 finished(UrlArr)
-                
             }
             else {
                 print("data == nil")
@@ -52,5 +51,35 @@ class HXNetwork: NSObject {
         }
         task.resume()
     }
-
+    
+     func loadVideoData(finished:@escaping (_ videoArr: [HXVideoData]) -> ()){
+        let url = URL(string: "http://www.cctvjy.cn/program/liveList.do")
+        let session = URLSession.shared
+        var request = URLRequest(url: url!)
+        request.httpMethod = "get"
+        //        request.httpBody = "phone=\(phone)&pwd=\(pwd)&code=\(code)".data(using: String.Encoding.utf8)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            
+            if data != nil {
+                
+                let json = JSON(data:data!)
+                if let dataArr = json["data"].arrayObject{
+                        var videoArr = [HXVideoData]()
+                    for data in dataArr {
+                        let hxVideo = HXVideoData(fromDictionary: data as! NSDictionary)
+                        videoArr.append(hxVideo)
+                    }
+                    finished(videoArr)
+                }
+ 
+                let name = json["data"][0]["name"].stringValue
+            }
+            else {
+                print("data == nil")
+            }
+        }
+        task.resume()
+    }
+    
+    
 }

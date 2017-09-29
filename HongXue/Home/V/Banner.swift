@@ -12,7 +12,7 @@ class Banner: UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        HXNetwork.RegisterWithURLSession { (urlArr) in
+        HXNetwork.shareNetworkTool.loadBannerData { (urlArr) in
             
             DispatchQueue.main.async {
                 self.urlArr =  urlArr
@@ -120,7 +120,5 @@ extension Banner:UICollectionViewDelegateFlowLayout {
     //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     //        return CGSize(width: ScreenWidth - 120 ,  height: 150)
     //    }
-    
-    
     
 }

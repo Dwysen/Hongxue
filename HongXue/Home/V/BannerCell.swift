@@ -24,6 +24,7 @@ class BannerCell: UICollectionViewCell {
         super.init(frame: frame)
         imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: width , height: height))
         self.addSubview(imgView)
+    
         
     }
     

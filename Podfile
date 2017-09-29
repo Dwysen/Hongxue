@@ -4,5 +4,6 @@ target 'HongXue' do
 pod 'Alamofire'
 pod 'Kingfisher'
 pod 'SideMenu'
+pod 'SwiftyJSON'
 end
 

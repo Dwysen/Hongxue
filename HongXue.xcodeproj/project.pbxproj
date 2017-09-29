@@ -14,6 +14,9 @@
 		5252E9D41F7CA23400D77137 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252E9D31F7CA23400D77137 /* LeftViewController.swift */; };
 		5252E9D61F7CA29000D77137 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252E9D51F7CA29000D77137 /* Common.swift */; };
 		5252E9D81F7CA67600D77137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252E9D71F7CA67600D77137 /* ViewController.swift */; };
+		525E2E181F7DD7B8004F84BB /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E2E171F7DD7B8004F84BB /* VideoViewController.swift */; };
+		525E2E1A1F7DDECA004F84BB /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E2E191F7DDECA004F84BB /* VideoCell.swift */; };
+		525E2E201F7E1315004F84BB /* HXVideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E2E1F1F7E1315004F84BB /* HXVideoData.swift */; };
 		526D342C1F7B4D70006380E3 /* HXNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D342B1F7B4D70006380E3 /* HXNetwork.swift */; };
 		526D34321F7B56DF006380E3 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D34311F7B56DF006380E3 /* BannerCell.swift */; };
 		52B24A191F7A364200CE0C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A181F7A364200CE0C3D /* AppDelegate.swift */; };
@@ -53,6 +56,9 @@
 		5252E9D31F7CA23400D77137 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		5252E9D51F7CA29000D77137 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5252E9D71F7CA67600D77137 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		525E2E171F7DD7B8004F84BB /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		525E2E191F7DDECA004F84BB /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		525E2E1F1F7E1315004F84BB /* HXVideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXVideoData.swift; sourceTree = "<group>"; };
 		526D342B1F7B4D70006380E3 /* HXNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXNetwork.swift; sourceTree = "<group>"; };
 		526D34311F7B56DF006380E3 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		52B24A151F7A364200CE0C3D /* HongXue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HongXue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +108,7 @@
 		5215048E1F7B989200CDED63 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				525E2E1B1F7E0E57004F84BB /* M */,
 				521504901F7B98C100CDED63 /* C */,
 				5215048F1F7B98A000CDED63 /* V */,
 			);
@@ -113,6 +120,7 @@
 			children = (
 				52B24A461F7A3A0B00CE0C3D /* Banner.swift */,
 				526D34311F7B56DF006380E3 /* BannerCell.swift */,
+				525E2E191F7DDECA004F84BB /* VideoCell.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				52B24A1A1F7A364200CE0C3D /* HomeViewController.swift */,
+				525E2E171F7DD7B8004F84BB /* VideoViewController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -132,6 +141,14 @@
 				521504941F7BA1FB00CDED63 /* HXTabBarController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		525E2E1B1F7E0E57004F84BB /* M */ = {
+			isa = PBXGroup;
+			children = (
+				525E2E1F1F7E1315004F84BB /* HXVideoData.swift */,
+			);
+			path = M;
 			sourceTree = "<group>";
 		};
 		52B24A0C1F7A364200CE0C3D = {
@@ -370,12 +387,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -407,12 +426,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525E2E181F7DD7B8004F84BB /* VideoViewController.swift in Sources */,
 				521504961F7BA1FB00CDED63 /* HXTabBarController.swift in Sources */,
 				521504971F7BA1FB00CDED63 /* HXNavigationController.swift in Sources */,
 				52B24A491F7A3C3C00CE0C3D /* UIViewExt.swift in Sources */,
+				525E2E201F7E1315004F84BB /* HXVideoData.swift in Sources */,
 				5252E9D41F7CA23400D77137 /* LeftViewController.swift in Sources */,
 				5252E9D81F7CA67600D77137 /* ViewController.swift in Sources */,
 				5252E9D61F7CA29000D77137 /* Common.swift in Sources */,
+				525E2E1A1F7DDECA004F84BB /* VideoCell.swift in Sources */,
 				526D342C1F7B4D70006380E3 /* HXNetwork.swift in Sources */,
 				52B24A1B1F7A364200CE0C3D /* HomeViewController.swift in Sources */,
 				52B24A191F7A364200CE0C3D /* AppDelegate.swift in Sources */,

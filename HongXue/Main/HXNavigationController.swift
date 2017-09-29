@@ -11,6 +11,7 @@ class HXNavigationController: UINavigationController {
         navBar.barTintColor = Common.e51c24  
         
 //       NSAttributedStringKey.foregroundColor
+        navBar.isTranslucent = false
     
         navBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         
