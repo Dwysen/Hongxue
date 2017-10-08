@@ -28,7 +28,6 @@ class HXNetwork: NSObject {
                 let json = JSON(data:data!)
                 let dataObject = json["data"].arrayValue
 //
-                print(dataObject)
 //                let responseObject = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
 //                guard responseObject != nil else{
 //                    return
@@ -68,6 +67,9 @@ class HXNetwork: NSObject {
                     for data in dataArr {
                         let hxVideo = HXVideoData(fromDictionary: data as! NSDictionary)
                         videoArr.append(hxVideo)
+                        
+                        print(videoArr)
+                        
                     }
                     finished(videoArr)
                 }

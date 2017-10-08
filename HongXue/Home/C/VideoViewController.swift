@@ -18,20 +18,20 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.height = 300
+        view.height = Common.videoViewHeight
         view.backgroundColor = UIColor.cyan
-        
         
         weak var weakSelf = self
         HXNetwork.shareNetworkTool.loadVideoData { (videoArr) in
+         
             
+            print(videoArr)
             
               // TO DO
-            
-              print(videoArr[0].name)
-              print(videoArr[1].name)
-              print(videoArr[2].name)
-              print(videoArr[3].name)
+//              print(videoArr[0].name)
+//              print(videoArr[1].name)
+//              print(videoArr[2].name)
+//              print(videoArr[3].name)
         
             
             DispatchQueue.main.async {
@@ -39,20 +39,18 @@ class VideoViewController: UIViewController {
                 weakSelf?.videoArr = videoArr
                 weakSelf!.setupCollectionView()
             }
-            
-            
         }
-        
-        
-        
     }
     
-    
     private func setupCollectionView(){
+    
+        let titleView = TitleView(frame: CGRect(x: 0, y: 0, width: Common.screenWidth, height: Common
+        .titleViewHeight))
+        view.addSubview(titleView)
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 20, width: Common.screenWidth, height: 100), collectionViewLayout: flowLayout)
+        collectionView = UICollectionView(frame: CGRect(x: 0, y: Common.titleViewHeight, width: Common.screenWidth, height: 108), collectionViewLayout: flowLayout)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -68,7 +66,7 @@ class VideoViewController: UIViewController {
 extension VideoViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return (videoArr?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -80,7 +78,7 @@ extension VideoViewController:UICollectionViewDataSource,UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 80)
+        return CGSize(width: 170, height: 108)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)

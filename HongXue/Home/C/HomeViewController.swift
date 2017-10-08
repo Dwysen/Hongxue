@@ -35,6 +35,8 @@ class HomeViewController: UIViewController {
         
         setupVideoSection()
         
+        setupInformationSection()
+        
         scrollView.contentSize = CGSize(width: Common.screenWidth, height: 1000)
         
     }
@@ -55,11 +57,26 @@ class HomeViewController: UIViewController {
     
     private func setupVideoSection(){
         
-        let videoSectionView = UIView(frame: CGRect(x: 0, y: bannerH + Common.sectionMargin, width: Common.screenWidth, height: 300))
+        let videoSectionView = UIView(frame: CGRect(x: 0, y: bannerH, width: Common.screenWidth, height: Common.videoViewHeight))
         let videoVC = VideoViewController()
         addChildViewController(videoVC)
         videoSectionView.addSubview(videoVC.view)
         scrollView.addSubview(videoSectionView)
+        
+    }
+    
+    private func setupInformationSection(){
+        
+        let informationSectionView = UIView(frame: CGRect(x: 0, y: bannerH + Common.videoViewHeight, width: Common
+            .screenWidth, height: Common.informationViewHeight))
+        let informationVC = InformationViewController()
+        addChildViewController(informationVC)
+        informationSectionView.addSubview(informationVC.view)
+        
+    
+         scrollView.addSubview(informationSectionView)
+        
+        
         
     }
     
