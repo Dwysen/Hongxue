@@ -8,45 +8,37 @@
 
 import UIKit
 
-class VideoViewController: UIViewController {
+class BattleReviewViewController: UIViewController {
     
     
     var collectionView:UICollectionView!
-    var videoArr:[HXVideoData]?
+    var battleArr:[HXBattleData]?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.height = Common.videoViewHeight
-        view.backgroundColor = UIColor.cyan
+        view.backgroundColor = UIColor.brown
         
         weak var weakSelf = self
-        HXNetwork.shareNetworkTool.loadVideoData { (videoArr) in
-         
-            
-//            print(videoArr)
-            
-              // TO DO
-//              print(videoArr[0].name)
-//              print(videoArr[1].name)
-//              print(videoArr[2].name)
-//              print(videoArr[3].name)
         
+        HXNetwork.shareNetworkTool.loadBattleReviewData { (battleArr) in
             
             DispatchQueue.main.async {
                 
-                weakSelf?.videoArr = videoArr
+                weakSelf?.battleArr = battleArr
                 weakSelf!.setupCollectionView()
             }
         }
     }
     
     private func setupCollectionView(){
-    
+        
         let titleView = TitleView(frame: CGRect(x: 0, y: 0, width: Common.screenWidth, height: Common
-        .titleViewHeight))
-    
+            .titleViewHeight))
+        titleView.viewTitleLabel.text = "战绩回顾"
+        titleView.viewSubTitleLabel.text = "查看近期直播视频"
         view.addSubview(titleView)
         
         let flowLayout = UICollectionViewFlowLayout()
@@ -57,25 +49,24 @@ class VideoViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = UIColor.white
-        collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(BattleCell.self, forCellWithReuseIdentifier: "cell")
         view.addSubview(collectionView)
         
     }
     
 }
 
-extension VideoViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+extension BattleReviewViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (videoArr?.count)!
+        return (battleArr?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! VideoCell
-        cell.video = videoArr?[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BattleCell
+        cell.battle = battleArr![indexPath.row]
         return cell
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -88,3 +79,4 @@ extension VideoViewController:UICollectionViewDataSource,UICollectionViewDelegat
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
 }
+

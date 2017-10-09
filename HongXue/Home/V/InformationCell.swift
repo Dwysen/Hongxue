@@ -10,9 +10,20 @@ import UIKit
 
 class InformationCell: UITableViewCell {
 
+    var data:HXInformationData?{
+        didSet{
+            titleLabel.text = data?.title
+            timeLabel.text = data?.time
+            
+        }
+    }
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

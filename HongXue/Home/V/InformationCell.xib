@@ -47,24 +47,20 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVE-fJ-Ctf">
-                        <rect key="frame" x="154" y="64" width="59" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="j7C-Nx-GkZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3C6-NG-TuM"/>
                     <constraint firstItem="Pof-Rf-LEl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="GMf-Gt-4yR"/>
-                    <constraint firstItem="qVE-fJ-Ctf" firstAttribute="top" secondItem="qFK-re-rBV" secondAttribute="bottom" constant="5" id="WP0-39-Sve"/>
                     <constraint firstAttribute="trailing" secondItem="j7C-Nx-GkZ" secondAttribute="trailing" constant="10" id="cTy-Yb-BKK"/>
-                    <constraint firstItem="qVE-fJ-Ctf" firstAttribute="leading" secondItem="Pof-Rf-LEl" secondAttribute="trailing" constant="10" id="h9U-Ig-4le"/>
                     <constraint firstItem="Pof-Rf-LEl" firstAttribute="top" secondItem="qFK-re-rBV" secondAttribute="bottom" constant="5" id="pFX-2L-clt"/>
                     <constraint firstItem="j7C-Nx-GkZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="shH-qP-YAU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="timeLabel" destination="Pof-Rf-LEl" id="ADp-ui-jmq"/>
+                <outlet property="titleLabel" destination="qFK-re-rBV" id="k7h-Ga-xGM"/>
+            </connections>
             <point key="canvasLocation" x="32" y="81"/>
         </tableViewCell>
     </objects>

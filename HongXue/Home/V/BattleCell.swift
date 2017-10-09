@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideoCell: UICollectionViewCell {
+class BattleCell: UICollectionViewCell {
     
     private lazy var titleLabel:UILabel = {
         
@@ -19,19 +19,21 @@ class VideoCell: UICollectionViewCell {
         
     }()
     
-    private lazy var teacherLabel:UILabel = {
+    private lazy var timeLabel:UILabel = {
         
-        let teacherLabel = UILabel(frame: CGRect(x: width - 50, y: height - 25 , width: 50, height: 20))
-        teacherLabel.font = UIFont.systemFont(ofSize: 14)
-        teacherLabel.textColor = UIColor.white
-        return teacherLabel
+        let timeLabel = UILabel(frame: CGRect(x: width - 50, y: height - 25 , width: 50, height: 20))
+        timeLabel.font = UIFont.systemFont(ofSize: 14)
+        timeLabel.textColor = UIColor.white
+        return timeLabel
         
     }()
     
-    var video:HXVideoData?{
+    var battle:HXBattleData?{
         didSet {
-            titleLabel.text = video?.name
-            teacherLabel.text = video?.teacherName
+            titleLabel.text = battle?.descriptionField
+
+            timeLabel.text = "\(String(describing: battle?.createTime))"
+
         }
     }
     
@@ -39,7 +41,7 @@ class VideoCell: UICollectionViewCell {
         super.init(frame: frame)
         backgroundColor = UIColor.blue
         addSubview(titleLabel)
-        addSubview(teacherLabel)
+        addSubview(timeLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,3 +49,4 @@ class VideoCell: UICollectionViewCell {
     }
     
 }
+

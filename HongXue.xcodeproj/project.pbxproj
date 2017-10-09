@@ -15,7 +15,6 @@
 		5252E9D61F7CA29000D77137 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252E9D51F7CA29000D77137 /* Common.swift */; };
 		5252E9D81F7CA67600D77137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252E9D71F7CA67600D77137 /* ViewController.swift */; };
 		525E17561F8A02BC00DC5645 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E17551F8A02BC00DC5645 /* TitleView.swift */; };
-		525E17581F8A0B5F00DC5645 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E17571F8A0B5F00DC5645 /* InformationViewController.swift */; };
 		525E175A1F8A118F00DC5645 /* SingleInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E17591F8A118F00DC5645 /* SingleInformationView.swift */; };
 		525E175D1F8A1B4A00DC5645 /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E175B1F8A1B4A00DC5645 /* InformationCell.swift */; };
 		525E175E1F8A1B4A00DC5645 /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525E175C1F8A1B4A00DC5645 /* InformationCell.xib */; };
@@ -24,6 +23,12 @@
 		525E2E201F7E1315004F84BB /* HXVideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E2E1F1F7E1315004F84BB /* HXVideoData.swift */; };
 		526D342C1F7B4D70006380E3 /* HXNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D342B1F7B4D70006380E3 /* HXNetwork.swift */; };
 		526D34321F7B56DF006380E3 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D34311F7B56DF006380E3 /* BannerCell.swift */; };
+		5272F8D11F8B425900E9E502 /* HXInformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272F8D01F8B425900E9E502 /* HXInformationData.swift */; };
+		5272F8D31F8B521E00E9E502 /* BattleReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272F8D21F8B521E00E9E502 /* BattleReviewViewController.swift */; };
+		5272F8D51F8B5EBC00E9E502 /* HXBattleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272F8D41F8B5EBC00E9E502 /* HXBattleData.swift */; };
+		5272F8D71F8B615D00E9E502 /* BattleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272F8D61F8B615D00E9E502 /* BattleCell.swift */; };
+		5275C9F81F8B706D00E0EE21 /* TeacherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5275C9F71F8B706D00E0EE21 /* TeacherView.xib */; };
+		5275C9FA1F8B70FE00E0EE21 /* TeacherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275C9F91F8B70FE00E0EE21 /* TeacherView.swift */; };
 		52B24A191F7A364200CE0C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A181F7A364200CE0C3D /* AppDelegate.swift */; };
 		52B24A1B1F7A364200CE0C3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A1A1F7A364200CE0C3D /* HomeViewController.swift */; };
 		52B24A1E1F7A364200CE0C3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B24A1C1F7A364200CE0C3D /* Main.storyboard */; };
@@ -62,7 +67,6 @@
 		5252E9D51F7CA29000D77137 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5252E9D71F7CA67600D77137 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		525E17551F8A02BC00DC5645 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		525E17571F8A0B5F00DC5645 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		525E17591F8A118F00DC5645 /* SingleInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInformationView.swift; sourceTree = "<group>"; };
 		525E175B1F8A1B4A00DC5645 /* InformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
 		525E175C1F8A1B4A00DC5645 /* InformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
@@ -71,6 +75,12 @@
 		525E2E1F1F7E1315004F84BB /* HXVideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXVideoData.swift; sourceTree = "<group>"; };
 		526D342B1F7B4D70006380E3 /* HXNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXNetwork.swift; sourceTree = "<group>"; };
 		526D34311F7B56DF006380E3 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		5272F8D01F8B425900E9E502 /* HXInformationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXInformationData.swift; sourceTree = "<group>"; };
+		5272F8D21F8B521E00E9E502 /* BattleReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleReviewViewController.swift; sourceTree = "<group>"; };
+		5272F8D41F8B5EBC00E9E502 /* HXBattleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXBattleData.swift; sourceTree = "<group>"; };
+		5272F8D61F8B615D00E9E502 /* BattleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCell.swift; sourceTree = "<group>"; };
+		5275C9F71F8B706D00E0EE21 /* TeacherView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherView.xib; sourceTree = "<group>"; };
+		5275C9F91F8B70FE00E0EE21 /* TeacherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherView.swift; sourceTree = "<group>"; };
 		52B24A151F7A364200CE0C3D /* HongXue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HongXue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B24A181F7A364200CE0C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B24A1A1F7A364200CE0C3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -132,9 +142,12 @@
 				526D34311F7B56DF006380E3 /* BannerCell.swift */,
 				525E17591F8A118F00DC5645 /* SingleInformationView.swift */,
 				525E175B1F8A1B4A00DC5645 /* InformationCell.swift */,
+				5275C9F91F8B70FE00E0EE21 /* TeacherView.swift */,
+				5275C9F71F8B706D00E0EE21 /* TeacherView.xib */,
 				525E175C1F8A1B4A00DC5645 /* InformationCell.xib */,
 				525E17551F8A02BC00DC5645 /* TitleView.swift */,
 				525E2E191F7DDECA004F84BB /* VideoCell.swift */,
+				5272F8D61F8B615D00E9E502 /* BattleCell.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -144,7 +157,7 @@
 			children = (
 				52B24A1A1F7A364200CE0C3D /* HomeViewController.swift */,
 				525E2E171F7DD7B8004F84BB /* VideoViewController.swift */,
-				525E17571F8A0B5F00DC5645 /* InformationViewController.swift */,
+				5272F8D21F8B521E00E9E502 /* BattleReviewViewController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -162,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				525E2E1F1F7E1315004F84BB /* HXVideoData.swift */,
+				5272F8D01F8B425900E9E502 /* HXInformationData.swift */,
+				5272F8D41F8B5EBC00E9E502 /* HXBattleData.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -354,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B24A231F7A364200CE0C3D /* LaunchScreen.storyboard in Resources */,
+				5275C9F81F8B706D00E0EE21 /* TeacherView.xib in Resources */,
 				52B24A201F7A364200CE0C3D /* Assets.xcassets in Resources */,
 				5248D30C1F7B4B8700D55877 /* Podfile in Resources */,
 				52B24A1E1F7A364200CE0C3D /* Main.storyboard in Resources */,
@@ -442,8 +458,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5272F8D11F8B425900E9E502 /* HXInformationData.swift in Sources */,
 				525E2E181F7DD7B8004F84BB /* VideoViewController.swift in Sources */,
+				5272F8D31F8B521E00E9E502 /* BattleReviewViewController.swift in Sources */,
+				5275C9FA1F8B70FE00E0EE21 /* TeacherView.swift in Sources */,
 				521504961F7BA1FB00CDED63 /* HXTabBarController.swift in Sources */,
+				5272F8D71F8B615D00E9E502 /* BattleCell.swift in Sources */,
 				525E17561F8A02BC00DC5645 /* TitleView.swift in Sources */,
 				521504971F7BA1FB00CDED63 /* HXNavigationController.swift in Sources */,
 				52B24A491F7A3C3C00CE0C3D /* UIViewExt.swift in Sources */,
@@ -451,6 +471,7 @@
 				5252E9D41F7CA23400D77137 /* LeftViewController.swift in Sources */,
 				5252E9D81F7CA67600D77137 /* ViewController.swift in Sources */,
 				5252E9D61F7CA29000D77137 /* Common.swift in Sources */,
+				5272F8D51F8B5EBC00E9E502 /* HXBattleData.swift in Sources */,
 				525E2E1A1F7DDECA004F84BB /* VideoCell.swift in Sources */,
 				526D342C1F7B4D70006380E3 /* HXNetwork.swift in Sources */,
 				52B24A1B1F7A364200CE0C3D /* HomeViewController.swift in Sources */,
@@ -459,7 +480,6 @@
 				525E175A1F8A118F00DC5645 /* SingleInformationView.swift in Sources */,
 				52B24A471F7A3A0B00CE0C3D /* Banner.swift in Sources */,
 				526D34321F7B56DF006380E3 /* BannerCell.swift in Sources */,
-				525E17581F8A0B5F00DC5645 /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Dog-qf-fVC" customClass="TeacherView" customModule="HongXue" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tne-oF-XwF">
+                    <rect key="frame" x="54" y="73" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qXo-m9-UCS">
+                    <rect key="frame" x="21" y="134" width="109" height="3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="Gcp-S8-oBE"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                            <color key="value" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主讲课程" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7Q-Zs-oPg">
+                    <rect key="frame" x="20" y="143" width="54" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="dxk-lC-TM1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cdQ-HF-cud">
+                    <rect key="frame" x="50" y="15" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="kSK-pT-YqX"/>
+                        <constraint firstAttribute="width" constant="50" id="nBG-wa-V08"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                            <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vm9-EZ-C3S">
+                    <rect key="frame" x="52" y="101" width="46" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="fzD-pb-SpC"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                            <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vm9-EZ-C3S" firstAttribute="centerX" secondItem="qXo-m9-UCS" secondAttribute="centerX" id="1aR-ag-wk1"/>
+                <constraint firstItem="cdQ-HF-cud" firstAttribute="top" secondItem="sgS-82-mfQ" secondAttribute="top" constant="15" id="BYP-o3-Eyg"/>
+                <constraint firstItem="S7Q-Zs-oPg" firstAttribute="top" secondItem="qXo-m9-UCS" secondAttribute="bottom" constant="6" id="H3v-pE-N2m"/>
+                <constraint firstItem="qXo-m9-UCS" firstAttribute="top" secondItem="vm9-EZ-C3S" secondAttribute="bottom" constant="8" symbolic="YES" id="P9E-Ml-p33"/>
+                <constraint firstItem="Tne-oF-XwF" firstAttribute="top" secondItem="cdQ-HF-cud" secondAttribute="bottom" constant="8" symbolic="YES" id="QtT-ar-bkP"/>
+                <constraint firstItem="vm9-EZ-C3S" firstAttribute="top" secondItem="Tne-oF-XwF" secondAttribute="bottom" constant="7" id="V3z-yG-KLU"/>
+                <constraint firstItem="sgS-82-mfQ" firstAttribute="bottom" secondItem="S7Q-Zs-oPg" secondAttribute="bottom" constant="16" id="iPo-JX-L7X"/>
+                <constraint firstItem="cdQ-HF-cud" firstAttribute="centerX" secondItem="Tne-oF-XwF" secondAttribute="centerX" id="mgN-Vt-Znd"/>
+                <constraint firstItem="cdQ-HF-cud" firstAttribute="centerX" secondItem="Dog-qf-fVC" secondAttribute="centerX" id="oKP-oz-PzZ"/>
+                <constraint firstItem="qXo-m9-UCS" firstAttribute="leading" secondItem="Dog-qf-fVC" secondAttribute="leading" constant="21" id="pCD-0K-pdX"/>
+                <constraint firstItem="S7Q-Zs-oPg" firstAttribute="leading" secondItem="sgS-82-mfQ" secondAttribute="leading" constant="20" id="qKv-J0-cHn"/>
+                <constraint firstItem="Tne-oF-XwF" firstAttribute="centerX" secondItem="vm9-EZ-C3S" secondAttribute="centerX" id="y9e-N7-ZQl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="sgS-82-mfQ"/>
+            <connections>
+                <outlet property="WatchBtn" destination="vm9-EZ-C3S" id="rjl-g9-qtC"/>
+            </connections>
+            <point key="canvasLocation" x="-94" y="304"/>
+        </view>
+    </objects>
+</document>

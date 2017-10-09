@@ -17,9 +17,19 @@ struct Common {
     static let titleHeight:CGFloat = 20
     static let navigationHeight:CGFloat =  64.0
     static let videoViewHeight:CGFloat = 215
-    static let informationViewHeight:CGFloat = 1200
+   
     
     static let titleViewHeight:CGFloat = Common.titleMargin + Common.titleHeight + Common.tenPxMargin + Common.titleHeight + 20
+    static let informationViewHeight:CGFloat = Common.titleViewHeight + 500
+    static let teacherViewHeight:CGFloat = 180
+    static let teacherSectionHeight:CGFloat = Common
+        .titleViewHeight + Common.teacherViewHeight
+   
+    
+    static let subTitleGray = UIColor.init(red: 75/255, green: 75/255, blue: 75/255, alpha: 1)
+    static let teacherViewBackGray = UIColor.init(red: 65/255, green: 65/255, blue: 65/255, alpha: 1)
+    static let mainRed = UIColor.init(red: 255/255, green: 66/255, blue: 66/255, alpha: 1)
+    
     
 }
 

@@ -10,7 +10,7 @@ import UIKit
 
 class TitleView: UIView {
 
-    private lazy var viewTitleLabel:UILabel = {
+    lazy var viewTitleLabel:UILabel = {
         let label = UILabel(frame: CGRect(x: Common.tenPxMargin, y: Common.titleMargin , width:300, height: 20))
         label.text = "视频"
         //        label.textColor = UIColor.black
@@ -19,10 +19,10 @@ class TitleView: UIView {
         
     }()
     
-    private lazy var viewSubTitleLabel:UILabel = {
+     lazy var viewSubTitleLabel:UILabel = {
         let label = UILabel(frame: CGRect(x:Common.tenPxMargin , y: viewTitleLabel.maxY + Common.tenPxMargin , width:300, height: 20))
         label.text = "你成功学习的第一步"
-        label.textColor = UIColor.init(red: 75/255, green: 75/255, blue: 75/255, alpha: 1)
+        label.textColor = Common.subTitleGray
         label.font = UIFont.systemFont(ofSize: 15)
         
         return label
