@@ -24,6 +24,16 @@ class VideoViewController: UIViewController {
         weak var weakSelf = self
         HXNetwork.shareNetworkTool.loadVideoData { (videoArr) in
          
+            var dictArr = Array<NSDictionary>()
+            
+            for video in videoArr {
+                
+                let dict = video.toDictionary()
+                dictArr.append(dict)
+            }
+            UserDefaults.standard.set(dictArr, forKey: "dictArr")
+            
+            
             
 //            print(videoArr)
             

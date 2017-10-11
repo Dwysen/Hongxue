@@ -25,6 +25,9 @@ struct Common {
     static let teacherViewHeight:CGFloat = 180
     static let teacherSectionHeight:CGFloat = Common
         .titleViewHeight + Common.teacherViewHeight
+    
+    //
+    static let openScrollViewHeight = Common.screenHeight - Common.navigationHeight - 35 - 49
    
     
     static let subTitleGray = UIColor.init(red: 75/255, green: 75/255, blue: 75/255, alpha: 1)

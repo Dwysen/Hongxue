@@ -34,6 +34,9 @@
 		527850691F8C71DD0015BBC6 /* OpenClassHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527850681F8C71DD0015BBC6 /* OpenClassHistoryViewController.swift */; };
 		5278506B1F8C72FF0015BBC6 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278506A1F8C72FF0015BBC6 /* CaseViewController.swift */; };
 		5278506D1F8C90700015BBC6 /* OpenVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278506C1F8C90700015BBC6 /* OpenVideoCell.swift */; };
+		52AD609B1F8DEA5E008A8E6A /* OpenKungFuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD609A1F8DEA5D008A8E6A /* OpenKungFuViewController.swift */; };
+		52AD609E1F8DEB54008A8E6A /* KungFuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD609C1F8DEB54008A8E6A /* KungFuCell.swift */; };
+		52AD609F1F8DEB54008A8E6A /* KungFuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52AD609D1F8DEB54008A8E6A /* KungFuCell.xib */; };
 		52B24A191F7A364200CE0C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A181F7A364200CE0C3D /* AppDelegate.swift */; };
 		52B24A1B1F7A364200CE0C3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A1A1F7A364200CE0C3D /* HomeViewController.swift */; };
 		52B24A1E1F7A364200CE0C3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B24A1C1F7A364200CE0C3D /* Main.storyboard */; };
@@ -92,6 +95,9 @@
 		527850681F8C71DD0015BBC6 /* OpenClassHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenClassHistoryViewController.swift; sourceTree = "<group>"; };
 		5278506A1F8C72FF0015BBC6 /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
 		5278506C1F8C90700015BBC6 /* OpenVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVideoCell.swift; sourceTree = "<group>"; };
+		52AD609A1F8DEA5D008A8E6A /* OpenKungFuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenKungFuViewController.swift; sourceTree = "<group>"; };
+		52AD609C1F8DEB54008A8E6A /* KungFuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KungFuCell.swift; sourceTree = "<group>"; };
+		52AD609D1F8DEB54008A8E6A /* KungFuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KungFuCell.xib; sourceTree = "<group>"; };
 		52B24A151F7A364200CE0C3D /* HongXue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HongXue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B24A181F7A364200CE0C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B24A1A1F7A364200CE0C3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 			children = (
 				521504951F7BA1FB00CDED63 /* HXNavigationController.swift */,
 				521504941F7BA1FB00CDED63 /* HXTabBarController.swift */,
+				5252E9D51F7CA29000D77137 /* Common.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -216,6 +223,8 @@
 			children = (
 				5278506C1F8C90700015BBC6 /* OpenVideoCell.swift */,
 				52EBC4CD1F8CA489009B530B /* CaseCell.swift */,
+				52AD609C1F8DEB54008A8E6A /* KungFuCell.swift */,
+				52AD609D1F8DEB54008A8E6A /* KungFuCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 				527850641F8C6E0F0015BBC6 /* OpenClassViewController.swift */,
 				527850661F8C71A10015BBC6 /* OpenVideoViewController.swift */,
 				527850681F8C71DD0015BBC6 /* OpenClassHistoryViewController.swift */,
+				52AD609A1F8DEA5D008A8E6A /* OpenKungFuViewController.swift */,
 				5278506A1F8C72FF0015BBC6 /* CaseViewController.swift */,
 			);
 			path = C;
@@ -263,7 +273,6 @@
 				52B24A181F7A364200CE0C3D /* AppDelegate.swift */,
 				526D342B1F7B4D70006380E3 /* HXNetwork.swift */,
 				52B24A481F7A3C3C00CE0C3D /* UIViewExt.swift */,
-				5252E9D51F7CA29000D77137 /* Common.swift */,
 				5215048E1F7B989200CDED63 /* Home */,
 				52B24A1C1F7A364200CE0C3D /* Main.storyboard */,
 				52B24A1F1F7A364200CE0C3D /* Assets.xcassets */,
@@ -423,6 +432,7 @@
 			files = (
 				52B24A231F7A364200CE0C3D /* LaunchScreen.storyboard in Resources */,
 				5275C9F81F8B706D00E0EE21 /* TeacherView.xib in Resources */,
+				52AD609F1F8DEB54008A8E6A /* KungFuCell.xib in Resources */,
 				52B24A201F7A364200CE0C3D /* Assets.xcassets in Resources */,
 				5248D30C1F7B4B8700D55877 /* Podfile in Resources */,
 				52B24A1E1F7A364200CE0C3D /* Main.storyboard in Resources */,
@@ -530,6 +540,8 @@
 				5252E9D81F7CA67600D77137 /* ViewController.swift in Sources */,
 				5252E9D61F7CA29000D77137 /* Common.swift in Sources */,
 				5272F8D51F8B5EBC00E9E502 /* HXBattleData.swift in Sources */,
+				52AD609E1F8DEB54008A8E6A /* KungFuCell.swift in Sources */,
+				52AD609B1F8DEA5E008A8E6A /* OpenKungFuViewController.swift in Sources */,
 				5278506D1F8C90700015BBC6 /* OpenVideoCell.swift in Sources */,
 				525E2E1A1F7DDECA004F84BB /* VideoCell.swift in Sources */,
 				526D342C1F7B4D70006380E3 /* HXNetwork.swift in Sources */,

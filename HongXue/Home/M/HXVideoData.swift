@@ -63,6 +63,80 @@ struct HXVideoData {
         tId = dictionary["tId"] as? Int
         teacherName = dictionary["teacherName"] as? String
     }
+    
+    func toDictionary() -> NSDictionary
+    {
+        var dictionary = NSMutableDictionary()
+        if cutImg != nil{
+            dictionary["cutImg"] = cutImg
+        }
+        if delFlag != nil{
+            dictionary["delFlag"] = delFlag
+        }
+        if endTime != nil{
+            dictionary["endTime"] = endTime
+        }
+        if flvUrl != nil{
+            dictionary["flvUrl"] = flvUrl
+        }
+        if id != nil{
+            dictionary["id"] = id
+        }
+        if initImg != nil{
+            dictionary["initImg"] = initImg
+        }
+        if keyword != nil{
+            dictionary["keyword"] = keyword
+        }
+        if liveUrl != nil{
+            dictionary["liveUrl"] = liveUrl
+        }
+        if m3u8Url != nil{
+            dictionary["m3u8Url"] = m3u8Url
+        }
+        if mtsState != nil{
+            dictionary["mtsState"] = mtsState
+        }
+        if name != nil{
+            dictionary["name"] = name
+        }
+        if onoff != nil{
+            dictionary["onoff"] = onoff
+        }
+        if ossObject != nil{
+            dictionary["ossObject"] = ossObject
+        }
+        if playBackUrl != nil{
+            dictionary["playBackUrl"] = playBackUrl
+        }
+        if playTimes != nil{
+            dictionary["playTimes"] = playTimes
+        }
+        if rtmpUrl != nil{
+            dictionary["rtmpUrl"] = rtmpUrl
+        }
+        if shareTimes != nil{
+            dictionary["shareTimes"] = shareTimes
+        }
+        if startTime != nil{
+            dictionary["startTime"] = startTime
+        }
+        if streamName != nil{
+            dictionary["streamName"] = streamName
+        }
+        if summary != nil{
+            dictionary["summary"] = summary
+        }
+        if tId != nil{
+            dictionary["tId"] = tId
+        }
+        if teacherName != nil{
+            dictionary["teacherName"] = teacherName
+        }
+        return dictionary
+    }
+
+    
 }
 
 

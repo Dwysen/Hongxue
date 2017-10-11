@@ -11,6 +11,8 @@ import UIKit
 
 class OpenVideoViewController: UIViewController {
     
+    var videoArr:[HXVideoData]!
+    var dictArr:Array<NSDictionary>!
     
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -50,11 +52,19 @@ class OpenVideoViewController: UIViewController {
     
     private func setupTableView(){
         
-        let headView = UIView(frame: CGRect(x: 0, y: 0, width: Common.screenWidth, height: 50))
-        headView.backgroundColor = UIColor.yellow
+     
+          self.dictArr = UserDefaults.standard.object(forKey: "dictArr") as! Array<NSDictionary>
         
+      
+//        for dict in dictArr {
+//            let video = HXVideoData(fromDictionary: dict)
+//            videoArr.append(video)
+//        }
         
         tableView = UITableView(frame: CGRect(x: 0, y: videoViewHeight, width: Common.screenWidth, height: tableViewHeight ))
+        
+        let headView = UIView(frame: CGRect(x: 0, y: 0, width: Common.screenWidth, height: 50))
+        headView.backgroundColor = UIColor.yellow
         tableView.tableHeaderView = headView
         
         tableView.delegate = self
@@ -68,6 +78,13 @@ class OpenVideoViewController: UIViewController {
         print(tableView.maxY)
         
         scrollView.contentSize = CGSize(width: Common.screenWidth, height: videoViewHeight + tableViewHeight)
+        
+     
+        
+        print(dictArr[0]["name"]!)
+//        videoArr = UserDefaults.standard.object(forKey: "videoArr") as? [HXVideoData] 
+//
+//        print(videoArr)
         
     }
     
@@ -92,15 +109,15 @@ class OpenVideoViewController: UIViewController {
 extension OpenVideoViewController:UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return dictArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OpenVideoCell", for: indexPath) as! OpenVideoCell
         
-        
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OpenVideoCell", for: indexPath) as!OpenVideoCell
+        cell.videoData = dictArr[indexPath.row]
         return cell
-        
     }
     
     

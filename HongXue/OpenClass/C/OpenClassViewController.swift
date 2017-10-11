@@ -16,7 +16,7 @@ class OpenClassViewController : UIViewController {
     
     let kTitlesViewH: CGFloat = 35
     
-    let titleArr = ["视频直播","公开课历史","实盘案例","视频","书刊","随笔"]
+    let titleArr = ["视频直播","公开课历史","股市真功夫","实盘案例","视频","书刊","随笔"]
     let colorArr = [UIColor.white,UIColor.brown,UIColor.cyan,UIColor.yellow,UIColor.brown,UIColor.cyan]
     
     var titlesView = UIView()
@@ -35,14 +35,14 @@ class OpenClassViewController : UIViewController {
         
         self.addChildViewController(vc2)
         
-        let vc3 = CaseViewController()
+        let vc3 = OpenKungFuViewController()
         
         self.addChildViewController(vc3)
         
-        //        let vc4 = InterlocutionTableViewController()
-        //
-        //         self.addChildViewController(vc4)
+        let vc4 = CaseViewController()
         
+        self.addChildViewController(vc4)
+
         
         
         //        for i in 0 ..< titleArr.count {

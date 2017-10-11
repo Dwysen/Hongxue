@@ -71,6 +71,7 @@ class CaseViewController: UIViewController {
         
         
         tableView.mj_footer = footer
+        footer.setTitle("加载更多", for: MJRefreshState.refreshing)
         footer.setRefreshingTarget(self, refreshingAction: #selector(refresh))
         
 //        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
@@ -86,21 +87,24 @@ class CaseViewController: UIViewController {
         
   
         HXNetwork.shareNetworkTool.loadBattleReviewData( index: self.nextIndex, finished: { (arr) in
+            
+            if arr.count == 0 {
+                self.footer.isHidden = true
+            }
 
             for battle in arr {
                 self.battleArr?.append(battle)
+                self.tableView.reloadData()
             }
-
-            self.footer.endRefreshingWithNoMoreData()
-            
-            self.tableView.reloadData()
-
+       
+    
+            DispatchQueue.main.async {
+                self.footer.endRefreshing()
+            }
+        
             self.nextIndex += 1
 
         })
-        
-      
-        
         
     }
     
