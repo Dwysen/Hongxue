@@ -1,21 +1,27 @@
 PODS:
   - Alamofire (4.5.1)
   - Kingfisher (4.0.1)
+  - MJRefresh (3.1.12)
+  - PullToRefreshKit (0.7.0)
   - SideMenu (3.0.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
+  - MJRefresh
+  - PullToRefreshKit
   - SideMenu
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Kingfisher: b771785e9461ed4b8686d40e7145f9e58100cb24
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  PullToRefreshKit: 8a1de4451090e30094f266393cb4642d4a47d899
   SideMenu: f1fe8a4d23c8ae06d5cb18b21be29851d78fd2f2
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 11d1b1de04e396db675d06be939542e3e2754289
+PODFILE CHECKSUM: df9b9719f96806381c680c98f8ffb5504563ecb5
 
 COCOAPODS: 1.3.1

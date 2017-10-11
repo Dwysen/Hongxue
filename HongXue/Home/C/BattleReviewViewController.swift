@@ -19,14 +19,14 @@ class BattleReviewViewController: UIViewController {
         super.viewDidLoad()
         
         view.height = Common.videoViewHeight
-        view.backgroundColor = UIColor.brown
+//        view.backgroundColor = UIColor.brown
         
         weak var weakSelf = self
         
-        HXNetwork.shareNetworkTool.loadBattleReviewData { (battleArr) in
+        HXNetwork.shareNetworkTool.loadBattleReviewData (index: 1) { (battleArr) in
             
             DispatchQueue.main.async {
-                
+            
                 weakSelf?.battleArr = battleArr
                 weakSelf!.setupCollectionView()
             }

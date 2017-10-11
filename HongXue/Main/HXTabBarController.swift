@@ -19,7 +19,7 @@ class HXTabBarController: UITabBarController {
      */
     private func addChildViewControllers() {
         addChildViewController(childController: HomeViewController(), title: "单糖", imageName: "TabBar_home_23x23_")
-        addChildViewController(childController: HomeViewController(), title: "单品", imageName: "TabBar_gift_23x23_")
+        addChildViewController(childController: OpenClassViewController(), title: "单品", imageName: "TabBar_gift_23x23_")
       
     }
     

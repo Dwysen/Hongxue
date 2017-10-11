@@ -29,6 +29,11 @@
 		5272F8D71F8B615D00E9E502 /* BattleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272F8D61F8B615D00E9E502 /* BattleCell.swift */; };
 		5275C9F81F8B706D00E0EE21 /* TeacherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5275C9F71F8B706D00E0EE21 /* TeacherView.xib */; };
 		5275C9FA1F8B70FE00E0EE21 /* TeacherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275C9F91F8B70FE00E0EE21 /* TeacherView.swift */; };
+		527850651F8C6E0F0015BBC6 /* OpenClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527850641F8C6E0F0015BBC6 /* OpenClassViewController.swift */; };
+		527850671F8C71A10015BBC6 /* OpenVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527850661F8C71A10015BBC6 /* OpenVideoViewController.swift */; };
+		527850691F8C71DD0015BBC6 /* OpenClassHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527850681F8C71DD0015BBC6 /* OpenClassHistoryViewController.swift */; };
+		5278506B1F8C72FF0015BBC6 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278506A1F8C72FF0015BBC6 /* CaseViewController.swift */; };
+		5278506D1F8C90700015BBC6 /* OpenVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278506C1F8C90700015BBC6 /* OpenVideoCell.swift */; };
 		52B24A191F7A364200CE0C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A181F7A364200CE0C3D /* AppDelegate.swift */; };
 		52B24A1B1F7A364200CE0C3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A1A1F7A364200CE0C3D /* HomeViewController.swift */; };
 		52B24A1E1F7A364200CE0C3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B24A1C1F7A364200CE0C3D /* Main.storyboard */; };
@@ -38,6 +43,7 @@
 		52B24A391F7A364200CE0C3D /* HongXueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A381F7A364200CE0C3D /* HongXueUITests.swift */; };
 		52B24A471F7A3A0B00CE0C3D /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A461F7A3A0B00CE0C3D /* Banner.swift */; };
 		52B24A491F7A3C3C00CE0C3D /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B24A481F7A3C3C00CE0C3D /* UIViewExt.swift */; };
+		52EBC4CE1F8CA489009B530B /* CaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBC4CD1F8CA489009B530B /* CaseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,11 @@
 		5272F8D61F8B615D00E9E502 /* BattleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCell.swift; sourceTree = "<group>"; };
 		5275C9F71F8B706D00E0EE21 /* TeacherView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherView.xib; sourceTree = "<group>"; };
 		5275C9F91F8B70FE00E0EE21 /* TeacherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherView.swift; sourceTree = "<group>"; };
+		527850641F8C6E0F0015BBC6 /* OpenClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenClassViewController.swift; sourceTree = "<group>"; };
+		527850661F8C71A10015BBC6 /* OpenVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVideoViewController.swift; sourceTree = "<group>"; };
+		527850681F8C71DD0015BBC6 /* OpenClassHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenClassHistoryViewController.swift; sourceTree = "<group>"; };
+		5278506A1F8C72FF0015BBC6 /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
+		5278506C1F8C90700015BBC6 /* OpenVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVideoCell.swift; sourceTree = "<group>"; };
 		52B24A151F7A364200CE0C3D /* HongXue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HongXue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B24A181F7A364200CE0C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B24A1A1F7A364200CE0C3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +107,8 @@
 		52B24A3A1F7A364200CE0C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B24A461F7A3A0B00CE0C3D /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		52B24A481F7A3C3C00CE0C3D /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		52EBC4CD1F8CA489009B530B /* CaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseCell.swift; sourceTree = "<group>"; };
+		52F8E9A81F8CCC30006D2158 /* HongXue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HongXue-Bridging-Header.h"; sourceTree = "<group>"; };
 		CCB22F04A5279B01A75C19E0 /* Pods-HongXue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HongXue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HongXue/Pods-HongXue.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,9 +154,9 @@
 				52B24A461F7A3A0B00CE0C3D /* Banner.swift */,
 				526D34311F7B56DF006380E3 /* BannerCell.swift */,
 				525E17591F8A118F00DC5645 /* SingleInformationView.swift */,
-				525E175B1F8A1B4A00DC5645 /* InformationCell.swift */,
 				5275C9F91F8B70FE00E0EE21 /* TeacherView.swift */,
 				5275C9F71F8B706D00E0EE21 /* TeacherView.xib */,
+				525E175B1F8A1B4A00DC5645 /* InformationCell.swift */,
 				525E175C1F8A1B4A00DC5645 /* InformationCell.xib */,
 				525E17551F8A02BC00DC5645 /* TitleView.swift */,
 				525E2E191F7DDECA004F84BB /* VideoCell.swift */,
@@ -181,6 +194,43 @@
 			path = M;
 			sourceTree = "<group>";
 		};
+		527850601F8C6DD50015BBC6 /* OpenClass */ = {
+			isa = PBXGroup;
+			children = (
+				527850631F8C6DF60015BBC6 /* C */,
+				527850621F8C6DF30015BBC6 /* V */,
+				527850611F8C6DEE0015BBC6 /* M */,
+			);
+			path = OpenClass;
+			sourceTree = "<group>";
+		};
+		527850611F8C6DEE0015BBC6 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		527850621F8C6DF30015BBC6 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				5278506C1F8C90700015BBC6 /* OpenVideoCell.swift */,
+				52EBC4CD1F8CA489009B530B /* CaseCell.swift */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		527850631F8C6DF60015BBC6 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				527850641F8C6E0F0015BBC6 /* OpenClassViewController.swift */,
+				527850661F8C71A10015BBC6 /* OpenVideoViewController.swift */,
+				527850681F8C71DD0015BBC6 /* OpenClassHistoryViewController.swift */,
+				5278506A1F8C72FF0015BBC6 /* CaseViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
 		52B24A0C1F7A364200CE0C3D = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +241,7 @@
 				52B24A161F7A364200CE0C3D /* Products */,
 				BB88AF2BAB642AA149B17545 /* Pods */,
 				F96E611E615FF49973B9F33D /* Frameworks */,
+				52F8E9A81F8CCC30006D2158 /* HongXue-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +258,7 @@
 		52B24A171F7A364200CE0C3D /* HongXue */ = {
 			isa = PBXGroup;
 			children = (
+				527850601F8C6DD50015BBC6 /* OpenClass */,
 				521504931F7BA1E900CDED63 /* Main */,
 				52B24A181F7A364200CE0C3D /* AppDelegate.swift */,
 				526D342B1F7B4D70006380E3 /* HXNetwork.swift */,
@@ -329,6 +381,7 @@
 				TargetAttributes = {
 					52B24A141F7A364200CE0C3D = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					52B24A281F7A364200CE0C3D = {
@@ -418,6 +471,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HongXue/Pods-HongXue-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -425,6 +480,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -464,6 +521,7 @@
 				5275C9FA1F8B70FE00E0EE21 /* TeacherView.swift in Sources */,
 				521504961F7BA1FB00CDED63 /* HXTabBarController.swift in Sources */,
 				5272F8D71F8B615D00E9E502 /* BattleCell.swift in Sources */,
+				527850691F8C71DD0015BBC6 /* OpenClassHistoryViewController.swift in Sources */,
 				525E17561F8A02BC00DC5645 /* TitleView.swift in Sources */,
 				521504971F7BA1FB00CDED63 /* HXNavigationController.swift in Sources */,
 				52B24A491F7A3C3C00CE0C3D /* UIViewExt.swift in Sources */,
@@ -472,12 +530,17 @@
 				5252E9D81F7CA67600D77137 /* ViewController.swift in Sources */,
 				5252E9D61F7CA29000D77137 /* Common.swift in Sources */,
 				5272F8D51F8B5EBC00E9E502 /* HXBattleData.swift in Sources */,
+				5278506D1F8C90700015BBC6 /* OpenVideoCell.swift in Sources */,
 				525E2E1A1F7DDECA004F84BB /* VideoCell.swift in Sources */,
 				526D342C1F7B4D70006380E3 /* HXNetwork.swift in Sources */,
+				527850671F8C71A10015BBC6 /* OpenVideoViewController.swift in Sources */,
 				52B24A1B1F7A364200CE0C3D /* HomeViewController.swift in Sources */,
 				525E175D1F8A1B4A00DC5645 /* InformationCell.swift in Sources */,
+				5278506B1F8C72FF0015BBC6 /* CaseViewController.swift in Sources */,
+				527850651F8C6E0F0015BBC6 /* OpenClassViewController.swift in Sources */,
 				52B24A191F7A364200CE0C3D /* AppDelegate.swift in Sources */,
 				525E175A1F8A118F00DC5645 /* SingleInformationView.swift in Sources */,
+				52EBC4CE1F8CA489009B530B /* CaseCell.swift in Sources */,
 				52B24A471F7A3A0B00CE0C3D /* Banner.swift in Sources */,
 				526D34321F7B56DF006380E3 /* BannerCell.swift in Sources */,
 			);
@@ -648,6 +711,7 @@
 			baseConfigurationReference = CCB22F04A5279B01A75C19E0 /* Pods-HongXue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YG957T8LDV;
 				INFOPLIST_FILE = HongXue/Info.plist;
@@ -655,6 +719,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Hong-Xue-Education-Technology-Co.HongXue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HongXue-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -665,6 +731,7 @@
 			baseConfigurationReference = 2F657B29EA2DC1A8D0177FD0 /* Pods-HongXue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YG957T8LDV;
 				INFOPLIST_FILE = HongXue/Info.plist;
@@ -672,6 +739,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Hong-Xue-Education-Technology-Co.HongXue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HongXue-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

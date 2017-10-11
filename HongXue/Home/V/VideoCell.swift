@@ -10,6 +10,13 @@ import UIKit
 
 class VideoCell: UICollectionViewCell {
     
+    private lazy var imageView:UIImageView = {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: width
+            , height: height))
+        return imageView
+        
+    }()
+    
     private lazy var titleLabel:UILabel = {
         
         let titleLabel = UILabel(frame: CGRect(x: 10, y: height - 25 , width: 80, height: 20))
@@ -32,14 +39,18 @@ class VideoCell: UICollectionViewCell {
         didSet {
             titleLabel.text = video?.name
             teacherLabel.text = video?.teacherName
+            let str = Common.baseUrl + (video?.initImg)!
+            imageView.kf.setImage(with: URL(string: str))
+        
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor.blue
-        addSubview(titleLabel)
-        addSubview(teacherLabel)
+        addSubview(imageView)
+        imageView.addSubview(titleLabel)
+        imageView.addSubview(teacherLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {

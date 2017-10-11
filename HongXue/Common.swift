@@ -20,7 +20,8 @@ struct Common {
    
     
     static let titleViewHeight:CGFloat = Common.titleMargin + Common.titleHeight + Common.tenPxMargin + Common.titleHeight + 20
-    static let informationViewHeight:CGFloat = Common.titleViewHeight + 500
+    static let informationCellHeight:CGFloat = 60
+    static let informationViewHeight:CGFloat = Common.titleViewHeight + 5 * Common.informationCellHeight
     static let teacherViewHeight:CGFloat = 180
     static let teacherSectionHeight:CGFloat = Common
         .titleViewHeight + Common.teacherViewHeight

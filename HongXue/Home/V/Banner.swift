@@ -3,6 +3,7 @@ import UIKit
 class Banner: UIView{
     
     var urlArr = [URL]()
+    let sectionNum: Int = 100
     
     var CollectionView: UICollectionView?
     var flowlayout = UICollectionViewFlowLayout()
@@ -40,9 +41,13 @@ class Banner: UIView{
         self.addSubview(CollectionView!)
         //        let indexP = IndexPath(item: 2, section: 0)
         //        CollectionView?.scrollToItem(at: indexP, at: .centeredVertically, animated: true)
-        pageControl = UIPageControl.init(frame: CGRect(x:0,y: 0,width:frame.size.width / 2,height:30))
+        pageControl = UIPageControl.init(frame: CGRect(x:0,y: 0,width:frame.size.width / 2,height:20))
+   
         pageControl.center = CGPoint(x:frame.size.width / 2, y:frame.size.height - 20);
+        pageControl.pageIndicatorTintColor = UIColor.darkGray
+        pageControl.numberOfPages = 4
         self.addSubview(pageControl);
+        self.bringSubview(toFront: pageControl)
         
         
     }
@@ -54,13 +59,21 @@ class Banner: UIView{
         timer = timer1
     }
     
+//    func returnIndexPath()-> IndexPath{
+//        var currentIndexPath = CollectionView!.indexPathsForVisibleItems.last
+//        currentIndexPath = IndexPath(row: (currentIndexPath?.row)!, section: sectionNum / 2)
+//        CollectionView!.scrollToItem(at: currentIndexPath!, at: UICollectionViewScrollPosition.left, animated: false)
+//        return currentIndexPath!;
+//        
+//    }
+    
     @objc func nextPageView(){
         
-        let indexPath =
-            self.CollectionView!.indexPathsForVisibleItems.last
-        var nextItem = (indexPath!.item) + 1;
+        let indexPath = self.CollectionView!.indexPathsForVisibleItems.last!
+        var nextItem = (indexPath.item) + 1;
+
         
-        var section = indexPath!.section;
+        var section = indexPath.section;
         //滑动到最后一个item的时候，下一个变为下一Section的第一个
         if nextItem == urlArr.count {
             nextItem = 0
@@ -101,6 +114,20 @@ extension Banner:UICollectionViewDelegate, UICollectionViewDataSource{
         return urlArr.count
     }
     
+
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        self.addTimer()
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let indexPath = self.CollectionView!.indexPathsForVisibleItems.last!
+        self.pageControl.currentPage = indexPath.item
+        print(indexPath)
+    }
+   
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.timer.invalidate()
+    }
 }
 
 

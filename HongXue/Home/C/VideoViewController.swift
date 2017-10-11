@@ -19,7 +19,7 @@ class VideoViewController: UIViewController {
         super.viewDidLoad()
         
         view.height = Common.videoViewHeight
-        view.backgroundColor = UIColor.cyan
+//        view.backgroundColor = UIColor.cyan 
         
         weak var weakSelf = self
         HXNetwork.shareNetworkTool.loadVideoData { (videoArr) in

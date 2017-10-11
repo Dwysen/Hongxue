@@ -89,12 +89,12 @@ class HomeViewController: UIViewController {
         informationSectionView.addSubview(titleView)
         
         
-        tableView = UITableView(frame: CGRect(x: 0, y: Common.titleViewHeight, width: Common.screenWidth, height: 500))
+        tableView = UITableView(frame: CGRect(x: 0, y: Common.titleViewHeight, width: Common.screenWidth, height: 5 * Common.informationCellHeight))
         tableView.delegate = self
         tableView.dataSource = self
         let nib = UINib(nibName: String(describing: InformationCell.self), bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "InformationCell")
-        tableView.rowHeight = 100
+        tableView.rowHeight = Common.informationCellHeight
         informationSectionView.addSubview(tableView)
         
         scrollView.addSubview(informationSectionView)

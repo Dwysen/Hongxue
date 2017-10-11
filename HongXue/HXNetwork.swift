@@ -73,7 +73,7 @@ class HXNetwork: NSObject {
                     finished(videoArr)
                 }
                 
-                let name = json["data"][0]["name"].stringValue
+              
             }
             else {
                 print("data == nil")
@@ -113,9 +113,9 @@ class HXNetwork: NSObject {
         }
     }
     
-    func loadBattleReviewData(finished:@escaping (_ informationArr: [HXBattleData]) -> ()){
+    func loadBattleReviewData(index:Int,finished:@escaping (_ informationArr: [HXBattleData]) -> ()){
         
-        let url = URL(string:  "http://www.cctvjy.cn/review/list.do?index=1&size=5")
+        let url = URL(string:  "http://www.cctvjy.cn/review/list.do?index=\(index)&size=5")
         
         Alamofire.request(url!).responseJSON{ (response) in
             
